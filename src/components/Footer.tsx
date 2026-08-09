@@ -15,7 +15,6 @@ import type { ReactNode } from "react";
 
 import Logo from "../assets/beemalink.svg?react";
 
-
 const Footer = () => {
   const insuranceServices = [
     "Home Insurance",
@@ -30,13 +29,9 @@ const Footer = () => {
         className="
           mx-auto w-full max-w-360
           px-6 py-14
-
           sm:px-10
-
           md:px-12 md:py-16
-
           lg:px-16 lg:py-20
-
           xl:px-24
         "
       >
@@ -44,21 +39,22 @@ const Footer = () => {
         <div
           className="
             grid grid-cols-1 gap-12
-
             md:grid-cols-2
-
             lg:grid-cols-[1.5fr_0.8fr_1fr]
             lg:gap-16
           "
         >
-
-          {/* -------------------------
-              Logo + Newsletter
-          -------------------------- */}
+          {/* Logo + Newsletter */}
           <div>
             {/* Logo */}
-            <div className="w-fit rounded-md px-2 py-1 group cursor-pointer">
-              <Logo className="h-auto w-38 group-hover:scale-105 transition-transform duration-200" />
+            <div className="group w-fit cursor-pointer rounded-md px-2 py-1">
+              <Logo
+                className="
+                  h-auto w-38
+                  transition-transform duration-200
+                  group-hover:scale-105
+                "
+              />
             </div>
 
             <p className="mt-4 text-sm text-white/80">
@@ -92,9 +88,7 @@ const Footer = () => {
                     text-sm text-white
                     outline-none
                     transition-colors
-
                     placeholder:text-white/60
-
                     focus:border-white
                   "
                 />
@@ -111,7 +105,6 @@ const Footer = () => {
                     text-primary
                     transition-all
                     duration-300
-
                     hover:-translate-y-0.5
                     hover:bg-bg
                   "
@@ -122,10 +115,7 @@ const Footer = () => {
             </div>
           </div>
 
-
-          {/* -------------------------
-              Insurance Services
-          -------------------------- */}
+          {/* Insurance Services */}
           <div>
             <h3 className="mb-5 text-sm font-semibold">
               Insurance Services
@@ -140,9 +130,7 @@ const Footer = () => {
                       group flex w-fit
                       items-center gap-1
                       text-sm text-white/80
-                      transition-colors
-                      duration-300
-
+                      transition-colors duration-300
                       hover:text-white
                     "
                   >
@@ -150,9 +138,7 @@ const Footer = () => {
                       size={15}
                       strokeWidth={2}
                       className="
-                        transition-transform
-                        duration-300
-
+                        transition-transform duration-300
                         group-hover:translate-x-1
                       "
                     />
@@ -164,10 +150,7 @@ const Footer = () => {
             </ul>
           </div>
 
-
-          {/* -------------------------
-              Contact
-          -------------------------- */}
+          {/* Contact */}
           <div>
             <h3 className="mb-5 text-sm font-semibold">
               Contact Us
@@ -181,7 +164,6 @@ const Footer = () => {
                   flex items-center gap-3
                   text-sm text-white/80
                   transition-colors
-
                   hover:text-white
                 "
               >
@@ -203,7 +185,6 @@ const Footer = () => {
                   flex items-center gap-3
                   text-sm text-white/80
                   transition-colors
-
                   hover:text-white
                 "
               >
@@ -213,15 +194,14 @@ const Footer = () => {
                   className="shrink-0"
                 />
 
-                +977 9800000000
+                +977 9768567022
               </a>
             </div>
-
 
             {/* Social media */}
             <div className="mt-10 flex items-center gap-4">
               <SocialLink
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61590563348048"
                 label="Facebook"
                 icon={<FaFacebookF size={15} />}
               />
@@ -233,7 +213,7 @@ const Footer = () => {
               />
 
               <SocialLink
-                href="#"
+                href="https://www.instagram.com/beemalink.nepal/"
                 label="Instagram"
                 icon={<FaInstagram size={16} />}
               />
@@ -247,10 +227,7 @@ const Footer = () => {
           </div>
         </div>
 
-
-        {/* -------------------------
-            Bottom footer
-        -------------------------- */}
+        {/* Bottom footer */}
         <div
           className="
             mt-14
@@ -258,7 +235,6 @@ const Footer = () => {
             border-t border-white/20
             pt-6
             text-xs text-white/75
-
             sm:flex-row
             sm:items-center
             sm:justify-between
@@ -298,7 +274,6 @@ const Footer = () => {
 export default Footer;
 
 
-
 // --------------------------------
 // Social Link component
 // --------------------------------
@@ -326,9 +301,7 @@ const SocialLink = ({
         rounded-full
         bg-white
         text-primary
-        transition-all
-        duration-300
-
+        transition-all duration-300
         hover:-translate-y-1
         hover:scale-105
         hover:bg-bg

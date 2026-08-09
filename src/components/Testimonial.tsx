@@ -3,9 +3,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import Card from "../modal/Card";
 
-import Person1 from "../assets/person1.jpg";
-import Person2 from "../assets/person2.jpg";
-import Person3 from "../assets/person3.jpg";
+import Person1 from "../assets/Person1.jpg";
+import Person2 from "../assets/Person2.jpg";
+import Person3 from "../assets/Person3.jpg";
 
 interface TestimonialItem {
   picture: string;
