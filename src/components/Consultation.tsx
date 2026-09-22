@@ -22,32 +22,11 @@ const Consultation = () => {
           <p className="paragraph mt-6 max-w-80">
             Please fill out the form and experts will contact you shortly.
           </p>
-
-          {/* Statistics */}
-          <div className="mt-16 lg:mt-auto">
-            <div className="flex items-center gap-3">
-              {/* Circle */}
-                <div
-                    className="
-                        h-10 w-10 rounded-full
-                        bg-[conic-gradient(from_90deg,var(--color-primary)_0_76%,#E2E8F0_76%_100%)]
-                    "
-                />
-
-              <span className="text-2xl font-bold text-bodytext">
-                76%
-              </span>
-            </div>
-
-            <p className="mt-3 max-w-72 text-sm leading-normal text-bodytext font-medium ">
-              of requests are resolved in favor of the client, if there is a
-              request within 24 hours.
-            </p>
-          </div>
+        
         </div>
 
         {/* Form */}
-        <form className="flex flex-col gap-8 translate-y-30">
+        <form className="flex flex-col gap-8 ">
           {/* Full name */}
           <div className="flex flex-col gap-2">
             <label

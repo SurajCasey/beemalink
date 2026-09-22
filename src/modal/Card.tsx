@@ -31,6 +31,10 @@ const Card = ({
         <img
           src={picture}
           alt={name}
+          loading="lazy"
+          decoding="async"
+          width={64}
+          height={64}
           className="h-full w-full object-cover object-center"
         />
       </div>

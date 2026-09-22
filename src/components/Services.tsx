@@ -8,9 +8,9 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import Img1 from "../assets/car.jpg";
-import Img2 from "../assets/nepal.jpg";
-import Img3 from "../assets/family.jpg";
+import Img1 from "../assets/car.webp";
+import Img2 from "../assets/nepal.webp";
+import Img3 from "../assets/family.webp";
 
 const Services = () => {
   return (
@@ -173,19 +173,19 @@ const ServicesColumn = ({
       `}
     >
       {/* Background image */}
-      <div
+      <img
+        src={image}
+        alt=""
+        loading="lazy"
+        decoding="async"
         className="
           absolute inset-0
-          bg-cover
-          bg-center
-          bg-no-repeat
+          h-full w-full
+          object-cover object-center
           transition-transform
           duration-700
           hover:scale-105
         "
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
       />
 
       {/* Image overlay */}

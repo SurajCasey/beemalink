@@ -1,6 +1,6 @@
-import Img1 from "../assets/drive.jpg";
-import Img2 from "../assets/nepal.jpg";
-import Img3 from "../assets/family.jpg";
+import Img1 from "../assets/drive.webp";
+import Img2 from "../assets/nepal.webp";
+import Img3 from "../assets/family.webp";
 
 const About = () => {
   return (
@@ -20,8 +20,7 @@ const About = () => {
         <div
           className="
             mx-auto w-full max-w-145.5
-            text-left
-            
+            text-left     
             lg:mx-0 lg:text-left
           "
         >
@@ -49,7 +48,7 @@ const About = () => {
             increase its pool of customers and maintain the reputation of a
             reliable financial partner from year to year. In the Annual Report
             2019, you can read about the financial and operating performance of
-            BE SURE Insurance Company.
+            BeemaLink Nepal.
           </p>
         </div>
 
@@ -64,6 +63,8 @@ const About = () => {
           <div className="grid grid-cols-2 gap-2">
             <div className="aspect-[1.2/1] overflow-hidden">
               <img
+                loading="lazy"
+                decoding="async"
                 src={Img1}
                 alt="Person driving along a mountain road"
                 className="
@@ -77,6 +78,8 @@ const About = () => {
 
             <div className="aspect-[1.2/1] overflow-hidden">
               <img
+                loading="lazy"
+                decoding="async"
                 src={Img2}
                 alt="Mountain landscape in Nepal"
                 className="
@@ -92,6 +95,8 @@ const About = () => {
           {/* Bottom image */}
           <div className="mt-4 aspect-2.25/1 overflow-hidden sm:mt-6">
             <img
+              loading="lazy"
+              decoding="async"
               src={Img3}
               alt="Family spending time together"
               className="

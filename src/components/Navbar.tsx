@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav
         className="
           relative z-40
-          mx-auto w-full max-w-[1440px]
+          mx-auto w-full max-w-360
           px-6 pt-5
           sm:px-10
           md:px-12
@@ -49,7 +49,7 @@ const Navbar = () => {
             className="
               flex h-10 w-10 cursor-pointer
               flex-col items-center justify-center
-              gap-[5px]
+              gap-1.25
               md:hidden
             "
             onClick={() => setIsMenuOpen(true)}
@@ -57,9 +57,9 @@ const Navbar = () => {
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
           >
-            <span className="h-[2px] w-6 bg-heading" />
-            <span className="h-[2px] w-6 bg-heading" />
-            <span className="h-[2px] w-6 bg-heading" />
+            <span className="h-0.5 w-6 bg-heading" />
+            <span className="h-0.5 w-6 bg-heading" />
+            <span className="h-0.5 w-6 bg-heading" />
           </button>
         </div>
       </nav>
@@ -69,7 +69,7 @@ const Navbar = () => {
         type="button"
         aria-label="Close navigation menu"
         className={`
-          fixed inset-0 z-[60]
+          fixed inset-0 z-60
           bg-black/40
           transition-opacity duration-300
           md:hidden
@@ -87,7 +87,7 @@ const Navbar = () => {
       <aside
         id="mobile-navigation"
         className={`
-          fixed right-0 top-0 z-[70]
+          fixed right-0 top-0 z-70
           h-dvh w-[78%] max-w-72
           bg-card shadow-2xl
           transition-transform duration-300 ease-in-out
@@ -112,8 +112,8 @@ const Navbar = () => {
           onClick={() => setIsMenuOpen(false)}
           aria-label="Close navigation menu"
         >
-          <span className="absolute h-[2px] w-6 rotate-45 bg-heading" />
-          <span className="absolute h-[2px] w-6 -rotate-45 bg-heading" />
+          <span className="absolute h-0.5 w-6 rotate-45 bg-heading" />
+          <span className="absolute h-0.5 w-6 -rotate-45 bg-heading" />
         </button>
 
         {/* Navigation options */}

@@ -180,7 +180,7 @@ const Footer = () => {
 
               {/* Phone */}
               <a
-                href="tel:+9779800000000"
+                href="tel:+9779768567022"
                 className="
                   flex items-center gap-3
                   text-sm text-white/80
