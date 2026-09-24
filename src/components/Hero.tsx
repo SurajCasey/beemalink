@@ -5,11 +5,11 @@ const Hero = () => {
     >
       <div className="landing-hero-copy">
         <h1
-          className="landing-hero-title font-montserrat font-bold tracking-tight text-heading"
+          className="landing-hero-title font-montserrat font-medium tracking-tight text-heading"
         >
-          PROTECT WHAT
+          Insurance Made <span className="text-primary">Simple</span>.
           <span className="block">
-            MATTERS <span className="text-primary">MOST</span>
+            Protection Made <span className="text-primary">Personal</span>.
           </span>
         </h1>
 
@@ -17,16 +17,16 @@ const Hero = () => {
           className="paragraph mt-6 max-w-125
           "
         >
-          <span className="font-bold text-heading">Beemalink</span> helps
-          individuals, families, and businesses find the right insurance
-          solutions with trusted advice and personalised service.
+          Compare, understand and access insurance solutions
+          from trusted insurance providers in Nepal
+          — with support from Beemalink.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
           <button
             type="button"
             className="min-h-14 w-full cursor-pointer rounded-full border-2 border-primary
-              bg-primary px-8 font-semibold text-white transition-all duration-300 
+              bg-primary px-8 font-semibold text-white transition-all duration-300
               hover:bg-secondary hover:border-secondary sm:w-auto sm:min-w-39.5
               hover:-translate-y-1
             "
@@ -42,7 +42,7 @@ const Hero = () => {
               hover:shadow-lg hover:border-primary/20
             "
           >
-            Contact Us
+            Talk to an Advisor
           </button>
         </div>
       </div>
