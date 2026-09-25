@@ -307,3 +307,10 @@ html[lang=ne] .desktop-nav { gap:12px; }
  html[lang=ne] .need-grid { grid-template-columns:repeat(3,1fr); }
  html[lang=ne] .button { white-space:normal; }
 }
+
+/* Continue the homepage photograph behind the mobile navigation. */
+@media(max-width:639px) {
+ .home-page .site-header { background:transparent; margin-bottom:-76px; }
+ .home-page .hero-inner { padding-top:118px; min-height:816px; }
+ .home-page .home-hero { min-height:816px; }
+}

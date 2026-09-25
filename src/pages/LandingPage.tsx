@@ -31,7 +31,7 @@ export default function LandingPage() {
 
         <section className="intro-section site-container section-space" id="about">
           <div className="section-label"><span>{t("01 / WHY BEEMALINK")}</span><span lang="ne">तपाईंको विश्वास, हाम्रो साथ।</span></div>
-          <div className="intro-grid"><h2>{t("Insurance can be complicated.")}<br /><span className="muted">{t("We make it easier.")}</span></h2><div><p>{t("Beemalink brings the insurance journey together in one place. We help you understand your needs, explore available options and find your next step with confidence.")}</p><p className="small-copy">{t("From arranging your policy to coordinating renewals and claims, you have a team to turn to.")}</p><a className="text-link" href="/about">{t("Get to know our approach ")}<ArrowDown size={16} /></a></div></div>
+          <div className="intro-grid"><h2>{t("Insurance can be complicated.")}<br /><span className="muted">{t("We make it easier.")}</span></h2><div><p>{t("Beemalink brings the insurance journey together in one place. We help you understand your needs, explore available options and find your next step with confidence.")}</p><p className="small-copy">{t("From arranging your policy to coordinating renewals and claims, you have a team to turn to.")}</p><Link className="text-link" to="/about">{t("Get to know our approach ")}<ArrowDown size={16} /></Link></div></div>
           <div className="promise-row">{['Understand', 'Compare', 'Choose', 'Arrange', 'Support'].map((word, index) => <div key={word}><span>0{index + 1}</span>{t(word)}{index < 4 && <ArrowRight size={16} />}</div>)}</div>
         </section>
 
@@ -46,7 +46,7 @@ export default function LandingPage() {
         </div></section>
 
         <section className="popular-section site-container section-space">
-          <div className="section-heading"><div><p className="eyebrow">{t("A FEW PLACES TO BEGIN")}</p><h2>{t("Everyday needs.")}<br />{t("Thoughtful cover.")}</h2></div><a href="/portfolio" className="text-link">{t("View the insurance portfolio ")}<ArrowUpRight size={17} /></a></div>
+          <div className="section-heading"><div><p className="eyebrow">{t("A FEW PLACES TO BEGIN")}</p><h2>{t("Everyday needs.")}<br />{t("Thoughtful cover.")}</h2></div><Link to="/portfolio" className="text-link">{t("View the insurance portfolio ")}<ArrowUpRight size={17} /></Link></div>
           <div className="popular-grid">{[
             { title: 'Motor insurance', note: 'For the road ahead.', icon: CarFront, product: products[0] },
             { title: 'Health insurance', note: 'For you and your family.', icon: HeartPulse, product: products[2] },
