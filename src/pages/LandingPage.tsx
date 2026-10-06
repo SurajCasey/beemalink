@@ -1,11 +1,17 @@
 import { useLanguage } from '../i18n/LanguageContext';
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { PiArrowDownBold as ArrowDown, PiArrowRightBold as ArrowRight, PiArrowUpRightBold as ArrowUpRight, PiCheckBold as Check, PiClipboardTextDuotone as ClipboardCheck, PiCarProfileDuotone as CarFront, PiHeartbeatDuotone as HeartPulse, PiHouseLineDuotone as House, PiAirplaneTiltDuotone as Plane, PiPlantDuotone as Sprout, PiBuildingsDuotone as Building2, PiShieldCheckDuotone as ShieldCheck, PiPhoneCallDuotone as Phone, PiUsersThreeDuotone as Users, PiPackageDuotone as Package, PiHardHatDuotone as HardHat, PiArrowsClockwiseDuotone as RefreshCw, PiHandshakeDuotone as Handshake, PiChatsCircleDuotone as MessagesSquare, PiMapPinDuotone as MapPin, PiPlusBold as Plus, PiMinusBold as Minus } from 'react-icons/pi';
+import { PiArrowDownBold as ArrowDown, PiArrowRightBold as ArrowRight, PiArrowUpRightBold as ArrowUpRight, PiCheckBold as Check, PiClipboardTextDuotone as ClipboardCheck, PiCarProfileDuotone as CarFront, PiHeartbeatDuotone as HeartPulse, PiHouseLineDuotone as House, PiAirplaneTiltDuotone as Plane, PiPlantDuotone as Sprout, PiBuildingsDuotone as Building2, PiShieldCheckDuotone as ShieldCheck, PiPhoneCallDuotone as Phone, PiUsersThreeDuotone as Users, PiPackageDuotone as Package, PiHardHatDuotone as HardHat, PiArrowsClockwiseDuotone as RefreshCw, PiHandshakeDuotone as Handshake, PiChatsCircleDuotone as MessagesSquare, PiQuotesDuotone as Quotes, PiHeartStraightDuotone as Heart, PiBookOpenDuotone as BookOpen, PiLeafDuotone as Leaf, PiPlusBold as Plus, PiMinusBold as Minus } from 'react-icons/pi';
 import heroDesktop from '../assets/hero-desktop.webp';
 import heroMobile from '../assets/hero-mobile.webp';
 import nepal from '../assets/nepal-community.webp';
 import { products, needs, faqs, steps, productPath } from './siteData';
+const testimonials = [
+  { name:'Kumar Ghimire', initials:'KG', tone:'coral', review:'I did my car insurance through Beemalink Nepal. The process was easy and the team helped me with everything I needed. Overall, I had a good experience.' },
+  { name:'Shankar Bahadur Ghimire', initials:'SG', tone:'sky', review:'I am satisfied with the service provided by Beemalink Nepal and the different insurance options they offered. They explained the options properly and helped me choose what was suitable for me.' },
+  { name:'Muhan Hydropower Pvt. Ltd.', initials:'MH', tone:'mint', review:'Beemalink Nepal understood our insurance requirements and guided us to the right policy. They helped us get the coverage we needed and made the whole process easy for us. We are happy with their service.' },
+  { name:'TenX Hydro Holding Limited.', initials:'TX', tone:'sand', review:'As our insurance was due for renewal, Beemalink Nepal explored different options and suggested the policy that best suited our requirements. The whole process was hassle-free, and we received exactly the policy we wanted.' },
+] as const;
 export default function LandingPage() {
  const { t } = useLanguage();
  useEffect(()=>{document.title=t('Beemalink Nepal | Insurance made simple');document.querySelector('meta[name="description"]')?.setAttribute('content',t('Explore personal, business and agriculture insurance in Nepal with Beemalink. Get help with insurance options, quotes, claims and renewals.'));},[t]);
@@ -20,7 +26,6 @@ export default function LandingPage() {
               <div className="hero-actions"><Link className="button" to="/get-a-quote">{t("Get a Quote ")}<ArrowUpRight size={18} /></Link><a className="text-link" href="tel:+9779768567022">{t("Talk to an Advisor ")}<ArrowUpRight size={17} /></a></div>
               <p className="hero-assurance"><ShieldCheck size={17} />{t(" Your guide to insurance. Here to help you choose.")}</p>
             </div>
-            <div className="hero-location"><MapPin size={14} /><span>{t("Built around life in Nepal.")}</span></div>
           </div>
         </section>
 
@@ -40,8 +45,8 @@ export default function LandingPage() {
           <div className="section-heading"><h2>{t("Protection for")}<br />{t("what matters.")}</h2><p>{t("For the people you love, the business you’re building, and the livelihoods you depend on.")}</p></div>
           <div className="solution-grid">
             <article className="solution-card personal"><div className="solution-top"><span>01</span><Users size={32} /></div><div><h3>{t("You & your family.")}</h3><p>{t("Protect yourself, your family, vehicle, health and personal assets.")}</p></div><div className="solution-tags">{t("Motor · Health · Travel · Home")}</div><Link to="/personal">{t("Explore personal insurance ")}<ArrowUpRight size={21} /></Link></article>
-            <article className="solution-card business"><div className="solution-top"><span>02</span><Building2 size={32} /></div><div><h3>{t("Your business.")}<br />{t("Your hard work.")}</h3><p>{t("Explore protection for your property, people, equipment, cargo and operations.")}</p></div><div className="solution-tags">{t("Property · Marine · Engineering")}</div><Link to="/business">{t("Explore business insurance ")}<ArrowUpRight size={21} /></Link></article>
-            <article className="solution-card agriculture"><div className="solution-top"><span>03</span><Sprout size={32} /></div><div><h3>{t("Growing a")}<br />{t("better tomorrow.")}</h3><p>{t("Explore available insurance for eligible crops, livestock and agricultural assets.")}</p></div><div className="solution-tags">{t("Crop · Livestock · Agricultural assets")}</div><Link to="/agriculture">{t("Explore agriculture insurance ")}<ArrowUpRight size={21} /></Link></article>
+            <article className="solution-card business"><div className="solution-top"><span>02</span><Building2 size={32} /></div><div><h3>{t("Your business.")}<br />{' '}{t("Your hard work.")}</h3><p>{t("Explore protection for your property, people, equipment, cargo and operations.")}</p></div><div className="solution-tags">{t("Property · Marine · Engineering")}</div><Link to="/business">{t("Explore business insurance ")}<ArrowUpRight size={21} /></Link></article>
+            <article className="solution-card agriculture"><div className="solution-top"><span>03</span><Sprout size={32} /></div><div><h3>{t("Growing a")}<br />{' '}{t("better tomorrow.")}</h3><p>{t("Explore available insurance for eligible crops, livestock and agricultural assets.")}</p></div><div className="solution-tags">{t("Crop · Livestock · Agricultural assets")}</div><Link to="/agriculture">{t("Explore agriculture insurance ")}<ArrowUpRight size={21} /></Link></article>
           </div>
         </div></section>
 
@@ -66,9 +71,24 @@ export default function LandingPage() {
         </div></section>
 
         <section className="local-section site-container section-space">
-          <div className="local-image"><img src={nepal} alt={t("AI-generated illustration of a Nepali shop owner and her father reviewing a notebook")} loading="lazy" /><span>{t("UNDERSTANDING YOUR LIFE. SUPPORTING YOUR CHOICES.")}</span></div>
-          <div className="local-copy"><p className="eyebrow">{t("WHY CHOOSE BEEMALINK")}</p><h2>{t("Different lives.")}<br />{t("A shared need")}<br />{t("for reassurance.")}</h2><p>{t("Insurance should fit your life. We take the time to understand what matters to you and make the next steps easier to manage.")}</p><div className="benefits">{['Multiple insurance options', 'Personalised assistance', 'Clear information', 'A convenient process', 'Renewal support', 'Claims assistance'].map(text => <span key={text}><Check size={16} />{t(text)}</span>)}</div><div className="network-note"><Handshake size={28} /><div><h3>{t("Our insurance network")}</h3><p>{t("We work with relevant licensed insurance providers to help customers access insurance solutions.")}</p></div></div></div>
+          <div className="local-image"><img src={nepal} alt={t("Illustration of a Nepali shop owner and her father reviewing a notebook")} loading="lazy" /><span>{t("UNDERSTANDING YOUR NEEDS, FINDING THE RIGHT COVERAGE.")}</span></div>
+          <div className="local-copy"><p className="eyebrow">{t("WHY CHOOSE BEEMALINK")}</p><h2>{t("Different lives.")}<br />{t("A shared need")}<br />{' '}{t("for reassurance.")}</h2><p>{t("Insurance should fit your life. We take the time to understand what matters to you and make the next steps easier to manage.")}</p><div className="benefits">{['Multiple insurance options', 'Personalised assistance', 'Clear information', 'A convenient process', 'Renewal support', 'Claims assistance'].map(text => <span key={text}><Check size={16} />{t(text)}</span>)}</div><div className="network-note"><Handshake size={28} /><div><h3>{t("Our insurance network")}</h3><p>{t("We work with relevant licensed insurance providers to help customers access insurance solutions.")}</p></div></div></div>
         </section>
+
+        <section className="testimonials-section section-space" aria-labelledby="testimonials-title">
+          <div className="site-container testimonial-intro"><p className="eyebrow">{t("CLIENT EXPERIENCES")}</p><h2 id="testimonials-title">{t("What our clients say.")}</h2><p>{t("Real experiences from individuals and businesses we have helped with their insurance needs.")}</p></div>
+          <div className="testimonial-marquee">{[testimonials.slice(0,2),testimonials.slice(2,4)].map((row,rowIndex)=><div className={`testimonial-row row-${rowIndex+1}`} key={rowIndex}><div className="testimonial-track">{[...row,...row].map((item,index)=><figure key={`${item.name}-${index}`} className={`testimonial-card testimonial-${item.tone}`} aria-hidden={index>=row.length}><Quotes size={24} aria-hidden="true"/><blockquote>{t(item.review)}</blockquote><figcaption><span className="testimonial-avatar" aria-hidden="true">{item.initials}</span><span>{t(item.name)}</span></figcaption></figure>)}</div></div>)}</div>
+        </section>
+
+        <section className="beyond-section section-space" aria-labelledby="beyond-title"><div className="site-container">
+          <div className="section-label"><span>{t("BEYOND BUSINESS")}</span><span>{t("OUR WIDER COMMITMENT")}</span></div>
+          <div className="beyond-heading"><p className="eyebrow">{t("PURPOSE IN ACTION")}</p><h2 id="beyond-title">{t("Beyond Business.")}</h2></div>
+          <div className="beyond-grid">{[
+            [Heart, 'Social Responsibility', 'We believe in giving back to society by supporting communities and contributing to meaningful social initiatives.'],
+            [BookOpen, 'Insurance Awareness & Financial Literacy', 'We focus on improving insurance and financial literacy while empowering young people with the knowledge, skills, and opportunities to explore entrepreneurship and build a financially responsible future.'],
+            [Leaf, 'Environment & Sustainability', 'We support responsible and sustainable practices that contribute to a cleaner environment and a better future.'],
+          ].map(([Icon, title, text]) => { const ItemIcon = Icon as typeof Heart; return <article key={title as string}><ItemIcon size={38} aria-hidden="true"/><span className="beyond-number">0{title === 'Social Responsibility' ? 1 : title === 'Insurance Awareness & Financial Literacy' ? 2 : 3}</span><h3>{t(title as string)}</h3><p>{t(text as string)}</p></article>; })}</div>
+        </div></section>
 
         <section className="portfolio-section section-space"><div className="site-container section-heading"><div><p className="eyebrow">{t("THE INSURANCE PORTFOLIO")}</p><h2>{t("One place. More possibilities.")}</h2></div><Link className="button" to="/portfolio">{t("Explore all insurance ")}<ArrowUpRight size={18}/></Link></div></section>
 
